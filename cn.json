@@ -1,0 +1,134 @@
+{
+    "1/1/2025": {
+        "type": "holiday",
+        "note": "元旦"
+    },
+    "1/26/2025": {
+        "type": "shift",
+        "note": "春节补班"
+    },
+    "1/28/2025": {
+        "type": "holiday",
+        "note": "春节"
+    },
+    "1/29/2025": {
+        "type": "holiday",
+        "note": "春节"
+    },
+    "1/30/2025": {
+        "type": "holiday",
+        "note": "春节"
+    },
+    "1/31/2025": {
+        "type": "holiday",
+        "note": "春节"
+    },
+    "2/1/2025": {
+        "type": "holiday",
+        "note": "春节"
+    },
+    "2/2/2025": {
+        "type": "holiday",
+        "note": "春节"
+    },
+    "2/3/2025": {
+        "type": "holiday",
+        "note": "春节"
+    },
+    "2/4/2025": {
+        "type": "holiday",
+        "note": "春节"
+    },
+    "2/8/2025": {
+        "type": "shift",
+        "note": "春节补班"
+    },
+    "4/4/2025": {
+        "type": "holiday",
+        "note": "清明节"
+    },
+    "4/5/2025": {
+        "type": "holiday",
+        "note": "清明节"
+    },
+    "4/6/2025": {
+        "type": "holiday",
+        "note": "清明节"
+    },
+    "4/27/2025": {
+        "type": "shift",
+        "note": "劳动节补班"
+    },
+    "5/1/2025": {
+        "type": "holiday",
+        "note": "劳动节"
+    },
+    "5/2/2025": {
+        "type": "holiday",
+        "note": "劳动节"
+    },
+    "5/3/2025": {
+        "type": "holiday",
+        "note": "劳动节"
+    },
+    "5/4/2025": {
+        "type": "holiday",
+        "note": "劳动节"
+    },
+    "5/5/2025": {
+        "type": "holiday",
+        "note": "劳动节"
+    },
+    "5/31/2025": {
+        "type": "holiday",
+        "note": "端午节"
+    },
+    "6/1/2025": {
+        "type": "holiday",
+        "note": "端午节"
+    },
+    "6/2/2025": {
+        "type": "holiday",
+        "note": "端午节"
+    },
+    "9/28/2025": {
+        "type": "shift",
+        "note": "国庆节,中秋节补班"
+    },
+    "10/1/2025": {
+        "type": "holiday",
+        "note": "国庆节,中秋节"
+    },
+    "10/2/2025": {
+        "type": "holiday",
+        "note": "国庆节,中秋节"
+    },
+    "10/3/2025": {
+        "type": "holiday",
+        "note": "国庆节,中秋节"
+    },
+    "10/4/2025": {
+        "type": "holiday",
+        "note": "国庆节,中秋节"
+    },
+    "10/5/2025": {
+        "type": "holiday",
+        "note": "国庆节,中秋节"
+    },
+    "10/6/2025": {
+        "type": "holiday",
+        "note": "国庆节,中秋节"
+    },
+    "10/7/2025": {
+        "type": "holiday",
+        "note": "国庆节,中秋节"
+    },
+    "10/8/2025": {
+        "type": "holiday",
+        "note": "国庆节,中秋节"
+    },
+    "10/11/2025": {
+        "type": "shift",
+        "note": "国庆节,中秋节补班"
+    }
+}
