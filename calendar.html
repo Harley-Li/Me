@@ -19,4 +19,13 @@
   <body class="">
     <div id="root"></div>
   </body>
+
+  <script>
+    window.onerror = function (message, source, lineno, colno, error) {
+      alert("Error message: " + message);
+      alert("Error object: " + error);
+      // Return true to prevent the default browser error handling
+      return true;
+    };
+  </script>
 </html>
