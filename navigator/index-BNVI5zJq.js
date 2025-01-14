@@ -9717,7 +9717,7 @@ const H1 = () => {
                               className: "img-container",
                               "aria-hidden": "true",
                               children: a.jsx("img", {
-                                src: "../hero.jpg",
+                                src: "/Me/hero.jpg",
                                 alt: "hero banner",
                               }),
                             }),
