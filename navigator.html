@@ -1,64 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigator</title>
-    <style>
-      #loading {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-        background-color: #fff;
-      }
-      .circle {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        border: 16px solid transparent;
-        animation-name: spin;
-        animation-duration: 600ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navigator</title>
+        <style>
+            #loading {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                position: fixed;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                background-color: #fff;
+            }
+            .circle {
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                border: 16px solid transparent;
+                animation-name: spin;
+                animation-duration: 600ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
 
-      @keyframes spin {
-        25% {
-          border-left-color: pink;
-          transform: rotate(90deg);
-        }
+            @keyframes spin {
+                25% {
+                    border-left-color: pink;
+                    transform: rotate(90deg);
+                }
 
-        50% {
-          border-top-color: lightblue;
-          transform: rotate(180deg);
-        }
+                50% {
+                    border-top-color: lightblue;
+                    transform: rotate(180deg);
+                }
 
-        75% {
-          border-right-color: lightcoral;
-          transform: rotate(270deg);
-        }
+                75% {
+                    border-right-color: lightcoral;
+                    transform: rotate(270deg);
+                }
 
-        100% {
-          border-bottom-color: lightgray;
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-    <script
-      type="module"
-      crossorigin
-      src="./navigator/index-BNVI5zJq.js"
-    ></script>
-  </head>
-  <body>
-    <div id="loading">
-      <div class="circle"></div>
-    </div>
-    <div id="root"></div>
-  </body>
+                100% {
+                    border-bottom-color: lightgray;
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+        <script type="module" crossorigin src="/navigator/index-B5AgXvx2.js"></script>
+    </head>
+    <body>
+        <div id="loading">
+            <div class="circle"></div>
+        </div>
+        <div id="root"></div>
+    </body>
 </html>
