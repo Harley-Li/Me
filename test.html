@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音转文字</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        #result {
+            height: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+            overflow-y: auto;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .status {
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>语音转文字演示</h1>
+    <button id="startBtn">开始录音</button>
+    <div id="result"></div>
+    <div class="status" id="status">准备就绪</div>
+
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const resultDiv = document.getElementById('result');
+        const statusDiv = document.getElementById('status');
+        
+        // 检查浏览器支持性
+        if (!('webkitSpeechRecognition' in window)) {
+            statusDiv.innerHTML = "⚠️ 当前浏览器不支持语音识别，请使用Chrome或Edge最新版本";
+            startBtn.disabled = true;
+        } else {
+            // 创建语音识别对象
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = true; // 持续监听
+            recognition.interimResults = true; // 显示中间结果
+            recognition.lang = 'zh-CN'; // 设置中文识别
+
+            let isListening = false;
+
+            // 识别开始事件
+            recognition.onstart = () => {
+                isListening = true;
+                startBtn.textContent = '停止录音';
+                statusDiv.textContent = '正在录音...';
+            };
+
+            // 识别结果事件
+            recognition.onresult = (event) => {
+                let interim = '';
+                let final = '';
+
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const transcript = event.results[i][0].transcript;
+                    if (event.results[i].isFinal) {
+                        final += transcript + ' ';
+                    } else {
+                        interim += transcript;
+                    }
+                }
+
+                resultDiv.innerHTML = final + '<i style="color:#666">' + interim + '</i>';
+            };
+
+            // 识别错误事件
+            recognition.onerror = (event) => {
+                console.error('识别错误:', event.error);
+                statusDiv.textContent = '错误: ' + event.error;
+            };
+
+            // 识别结束事件
+            recognition.onend = () => {
+                isListening = false;
+                startBtn.textContent = '开始录音';
+                statusDiv.textContent = final ? '识别完成' : '已停止';
+            };
+
+            // 按钮点击事件
+            startBtn.addEventListener('click', () => {
+                if (isListening) {
+                    recognition.stop();
+                } else {
+                    recognition.start();
+                }
+            });
+        }
+
+        // 请求麦克风权限
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .catch(() => {
+                statusDiv.textContent = '需要麦克风权限才能使用此功能';
+                startBtn.disabled = true;
+            });
+    </script>
+</body>
+</html>
